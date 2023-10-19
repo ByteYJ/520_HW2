@@ -28,18 +28,18 @@ Transaction Class
 
 ## Updates2
 Expense Tracker Update: Filtering Functionality
-New Features:
-1.TransactionFilter Interface: Standardizes transaction filtering with List<Transaction> filter(List<Transaction>) method.
-2.Filter Types:
--CategoryFilter: Filter transactions by category.
--AmountFilter: Filter by specified amount.
-3.Controller Updates: Added applyFilter() in ExpenseTrackerController. Filters transactions and updates UI.
-4.View Updates: UI enhancements in ExpenseTrackerView to select filter type ("Amount" or "Category"), input filter criteria(with both amount and category input validation), and apply filter. Filtered transactions are now highlighted in the table.
+- New Features:
+- 1.TransactionFilter Interface: Standardizes transaction filtering with List<Transaction> filter(List<Transaction>) method.
+- 2.Filter Types:
+- CategoryFilter: Filter transactions by category.
+- AmountFilter: Filter by specified amount.
+- 3.Controller Updates: Added applyFilter() in ExpenseTrackerController. Filters transactions and updates UI.
+- 4.View Updates: UI enhancements in ExpenseTrackerView to select filter type ("Amount" or "Category"), input filter criteria(with both amount and category input validation), and apply filter. Filtered transactions are now highlighted in the table.
 
-Usage:
-Select filter type from dropdown.
-Input filter value.
-Click 'Apply Filter' to view and highlight filtered transactions.
+- Usage:
+- Select filter type from dropdown.
+- Input filter value.
+- Click 'Apply Filter' to view and highlight filtered transactions.
 
 
 
