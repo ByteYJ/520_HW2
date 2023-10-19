@@ -34,7 +34,7 @@ New Features:
 -CategoryFilter: Filter transactions by category.
 -AmountFilter: Filter by specified amount.
 3.Controller Updates: Added applyFilter() in ExpenseTrackerController. Filters transactions and updates UI.
-4.View Updates: UI enhancements in ExpenseTrackerView to select filter type ("Amount" or "Category"), input filter criteria, and apply filter. Filtered transactions are now highlighted in the table.
+4.View Updates: UI enhancements in ExpenseTrackerView to select filter type ("Amount" or "Category"), input filter criteria(with both amount and category input validation), and apply filter. Filtered transactions are now highlighted in the table.
 
 Usage:
 Select filter type from dropdown.
