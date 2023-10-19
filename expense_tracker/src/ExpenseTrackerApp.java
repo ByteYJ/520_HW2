@@ -1,11 +1,11 @@
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
 
 import controller.ExpenseTrackerController;
 import model.ExpenseTrackerModel;
 import view.ExpenseTrackerView;
-import model.Transaction;
-import controller.InputValidation;
+
+
+import java.util.List;
 
 public class ExpenseTrackerApp {
 
@@ -15,6 +15,7 @@ public class ExpenseTrackerApp {
     ExpenseTrackerModel model = new ExpenseTrackerModel();
     ExpenseTrackerView view = new ExpenseTrackerView();
     ExpenseTrackerController controller = new ExpenseTrackerController(model, view);
+    view.setController(controller);
 
     // Initialize view
     view.setVisible(true);
@@ -34,6 +35,13 @@ public class ExpenseTrackerApp {
       }
     });
 
+    // Handle apply filter button clicks
+    view.getApplyFilterBtn().addActionListener(e -> {
+      String filterType = view.getSelectedFilterType();
+      String filterValue = view.getFilterValue();
+      List<Integer> filteredRows = controller.applyFilterAndHighlight(filterType, filterValue);
+      view.getTransactionsTable().repaint();
+      view.refreshTable(controller.getAllTransactions());
+    });
   }
-
 }
